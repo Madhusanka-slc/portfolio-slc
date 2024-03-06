@@ -1,10 +1,6 @@
-import { useRef, useState } from "react";
-import aboutImg from "../assets/images/about.png";
-import CountUp from "react-countup";
-import ScrollTrigger from "react-scroll-trigger";
+
 import me from "../assets/images/S.L.C Madhusanka.jpg";
-import banner from "../assets/images/rect.png";
-import { Canvas } from "@react-three/fiber";
+
 
 import {
   Box,

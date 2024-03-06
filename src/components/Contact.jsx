@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../assets/images/rect.png";
+
 import {motion} from "framer-motion";
 const Contact = () => {
   const contact_info = [

@@ -1,17 +1,9 @@
 import React, {useEffect} from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import project1 from "../assets/images/tensile.png";
-import project2 from "../assets/images/dashboard.png";
-import project3 from "../assets/images/led-blink.png";
 import project4 from "../assets/images/under.png";
 import project5 from "../assets/images/rotory.png";
-
-
-import me from "../assets/images/me.png";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Autoplay } from "swiper";
-import aboutImg from "../assets/images/about.png";
 import { motion, transform } from "framer-motion";
 import VanillaTilt from '/node_modules/.vite/vanilla-tilt.js?v=f3a84d89';
 

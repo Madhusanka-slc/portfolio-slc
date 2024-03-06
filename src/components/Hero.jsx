@@ -1,5 +1,4 @@
-import { Canvas } from "@react-three/fiber";
-import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
+
 import DSphere from "./DSphere";
 import {motion} from "framer-motion";
 

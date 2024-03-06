@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { FiMousePointer } from "react-icons/fi";
+
 
 const ROTATION_RANGE = 20;
 const HALF_ROTATION_RANGE = 20 / 2;
