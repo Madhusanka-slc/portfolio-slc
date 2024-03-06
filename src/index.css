@@ -7,7 +7,7 @@ html {
   @apply font-Poppins scroll-smooth;
 }
 body {
-  @apply box-border bg-gray-900 text-gray-100;
+  @apply box-border;
 }
 .btn-primary {
   @apply bg-cyan-600 font-semibold text-white md:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2;
@@ -31,4 +31,14 @@ textarea {
 
 ::selection {
   @apply bg-cyan-600;
+}
+
+.tiltcard{
+  width: 400px;
+  height: 550px;
+  background: rgba(255,255,255,0.25);
+  margin: 0 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.18);
+ 
 }

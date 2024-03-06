@@ -7,12 +7,30 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-regular-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@react-three/drei": "^8.11.0",
+    "@react-three/fiber": "^7.0.26",
+    "@types/three": "^0.137.0",
+    "d3-ease": "^3.0.1",
+    "framer-motion": "^6.5.1",
     "react": "^17.0.2",
     "react-awesome-button": "^6.5.1",
+    "react-circular-progressbar": "^2.1.0",
+    "react-countup": "^6.5.0",
     "react-dom": "^17.0.2",
+    "react-icons": "^5.0.1",
+    "react-intersection-observer": "^9.5.3",
     "react-loader-spinner": "^5.1.2",
+    "react-move": "^6.5.0",
     "react-router-dom": "^6.2.1",
-    "swiper": "^8.3.2"
+    "react-scroll-trigger": "^0.6.14",
+    "react-tilt": "^0.1.0",
+    "swiper": "^8.3.2",
+    "three": "^0.137.5",
+    "vanilla-tilt": "^1.8.1"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",

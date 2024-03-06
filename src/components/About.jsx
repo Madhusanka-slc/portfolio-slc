@@ -1,54 +1,150 @@
-import React from "react";
+import { useRef, useState } from "react";
 import aboutImg from "../assets/images/about.png";
+import CountUp from "react-countup";
+import ScrollTrigger from "react-scroll-trigger";
+import me from "../assets/images/S.L.C Madhusanka.jpg";
+import banner from "../assets/images/rect.png";
+import { Canvas } from "@react-three/fiber";
+
+import {
+  Box,
+  MeshDistortMaterial,
+  OrbitControls,
+  Sphere,
+  Plane,
+} from "@react-three/drei";
+
+import {
+  motion,
+  useSpring,
+  useViewportScroll,
+  useTransform,
+} from "framer-motion";
 const About = () => {
   const info = [
-    { text: "Years experience", count: "04" },
-    { text: "Completed Projects", count: "24" },
-    { text: "Companies Work", count: "06" },
+    { text: "Years experience", count: "01" },
+    { text: "Completed Projects", count: "04" },
+    { text: "Companies Work", count: "01" },
   ];
+  const imgVariants = {
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 100,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      x: -100,
+    },
+  };
+  const abtVariants = {
+    visible: {
+      opacity: 1,
+      x: 0,
+
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 100,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      x: 100,
+    },
+  };
+
   return (
-    <section id="about" className="py-10 text-white">
-      <div className="text-center mt-8">
-        <h3 className="text-4xl font-semibold">
-          About <span className="text-cyan-600">Me</span>
-        </h3>
-        <p className="text-gray-400 my-3 text-lg">My introduction</p>
-        <div className="flex md:flex-row flex-col-reverse items-center md:gap-6 gap-12 px-10 max-w-6xl mx-auto">
-          <div className="p-2">
-            <div className="text-gray-300 my-3">
-              <p className="text-justify leading-7 w-11/12 mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                eos, quam vel quisquam, explicabo sit labore dignissimos optio
-                ratione quibusdam doloribus pariatur consequuntur sint.
-                Reprehenderit cupiditate possimus facere quasi voluptatem?
-              </p>
-              <div className="flex mt-10 items-center gap-7">
-                {info.map((content) => (
-                  <div key={content.text}>
-                    <h3 className="md:text-4xl text-2xl font-semibold text-white">
-                      {content.count}
-                      <span className="text-cyan-600">+</span>{" "}
-                    </h3>
-                    <span className="md:text-base text-xs">{content.text}</span>
-                  </div>
-                ))}
-              </div>
-              <br />
-              <br />
-              <a href="./src/assets/Code_a_program.pdf" download>
-                <button className="btn-primary">Download CV</button>
-              </a>
-            </div>
-          </div>
-          <div className="flex-1 md:mt-0 mt-6 flex justify-center items-center">
-            <div className="lg:w-96 h-full relative sm:w-10/12 w-11/12 max-w-sm aboutImg ">
+    <section id="about">
+      <div className="main-container relative   h-[800px] min-w-full flex flex-col justify-center items-center bg-gradient-to-br from-[#c4b5eb] to-[#4b3881]">
+        <div className="main-wrapper relative flex flex-col justify-center items-center ">
+          <h3 className="text-4xl font-semibold  text-[#010851] ">
+            About <span className="text-white">Me</span>
+          </h3>
+
+          <div className="about-container flex   max-w-4xl mt-10 gap-10   lg:flex-row flex-col items-center">
+            <motion.div
+              className="img-wrapper md:w-[900px] w-[200px] "
+              variants={imgVariants}
+              initial="hidden"
+              whileInView={{
+                opacity: 1,
+                x: 0,
+                transition: {
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 100,
+                  delay: 0,
+                },
+              }}
+            >
               <img
-                src={aboutImg}
+                src={me}
                 alt=""
-                className="w-full object-cover bg-cyan-600 rounded-xl"
+                className="w-full object-cover  rounded-xl "
               />
-            </div>
+            </motion.div>
+
+            <motion.div
+              className="about-wrapper flex flex-col justify-center md:items-start items-center md:text-left text-center max-w-3xl gap-2"
+              variants={abtVariants}
+              initial="hidden"
+              whileInView={{
+                opacity: 1,
+                x: 0,
+                transition: {
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 100,
+                  delay: 1,
+                },
+              }}
+            >
+              <p className="text-justify  w-11/12 ">
+                Hello! I'm Madhusanka, a software developer from Sri Lanka. My
+                genuine passion lies in merging digital solutions with
+                mechanical systems.
+              </p>
+
+              <p className="text-justify  w-11/12 ">
+                Upon completing my degree in Mechanical Engineering at
+                Peradeniya University, I intentionally transitioned into a
+                career as a software developer. This shift allowed me to channel
+                my enthusiasm for enhancing digital solutions within the
+                mechanical engineering domain. Currently, I thrive in my role as
+                a software developer, actively participating in diverse and
+                impactful projects on a daily basis.
+              </p>
+              <div>
+                <a href="./src/assets/Code_a_program.pdf" download>
+                  <button
+                    className="z-50 font-semibold md:mx-0 mx-auto py-2 px-4 flex items-center gap-2 mt-8 relative border-2 hover:border-[#4b3881] border-[#4b3881] bg-transparent text-[#4b3881] 
+          transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-[#4b3881] 
+          before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100"
+                  >
+                    Resume
+                  </button>
+                </a>
+              </div>
+            </motion.div>
           </div>
+        </div>
+        <div className=" flex justify-center items-center ">
+          <svg
+            className="absolute bottom-0 "
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 319"
+          >
+            <path
+              fill="#ffff"
+              fill-opacity="1"
+              d="M0,64L80,101.3C160,139,320,213,480,250.7C640,288,800,288,960,266.7C1120,245,1280,203,1360,181.3L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+            ></path>
+          </svg>
         </div>
       </div>
     </section>
