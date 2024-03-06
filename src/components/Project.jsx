@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
-import project1 from "../assets/images/tensile.png";
-import project4 from "../assets/images/under.png";
-import project5 from "../assets/images/rotory.png";
+import project1 from "../assets/images/tensile.jpg";
+import project4 from "../assets/images/under.jpg";
+import project5 from "../assets/images/rotory.jpg";
 import "swiper/css";
 import "swiper/css/pagination";
 import { motion, transform } from "framer-motion";
