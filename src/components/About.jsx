@@ -1,20 +1,8 @@
 
 import me from "../assets/images/S.L.C Madhusanka.jpg";
 
-
-import {
-  Box,
-  MeshDistortMaterial,
-  OrbitControls,
-  Sphere,
-  Plane,
-} from "@react-three/drei";
-
 import {
   motion,
-  useSpring,
-  useViewportScroll,
-  useTransform,
 } from "framer-motion";
 const About = () => {
   const info = [
