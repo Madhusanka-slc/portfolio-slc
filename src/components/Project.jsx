@@ -5,7 +5,7 @@ import project5 from "../assets/images/rotory.jpg";
 import "swiper/css";
 import "swiper/css/pagination";
 import { motion, transform } from "framer-motion";
-import VanillaTilt from '/node_modules/.vite/vanilla-tilt.js?v=f3a84d89';
+
 
 
 const Project = () => {
@@ -77,22 +77,7 @@ const Project = () => {
     },
   };
 
-  const proList = ["pro1", "pro2", "pro3"];
-  useEffect(()=>{
 
-    proList.forEach(className => {
-      const tiltNode = document.querySelector("." + className); // Select elements by class name
-      VanillaTilt.init(tiltNode, {
-      max: 5,
-      speed: 10,
-      glare: true,
-      'max-glare': 0.5
-    });
-    });
-  
-  
-
-  });
 
   return (
     <section id="projects" className="py-10 text-black bg-white mt-20">
